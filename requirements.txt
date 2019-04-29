@@ -2,10 +2,10 @@
 # XXX need to confirm that the Registry and Resource Servers have the same dependencies?
 django==1.4.13
 django-tastypie==0.9.11
-django-celery-with-mongodb
+django-celery-with-mongodb==3.0
 pymongo==2.7.2
 requests
-django-extensions
+django-extensions==1.6.7
 django-uni-form
 cluster==1.2.0
 python-gcm

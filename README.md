@@ -8,6 +8,8 @@ __Please note__: openPDS requires a separate registry server for account managem
 __Contributors__: The dev branch is for ongoing development. Please submit pull requests to this brach.
 
 ## Getting started with openPDS
+Current version of openPDS will expire on January 1st, 2020 due to Python 2.7 reaching the end of its life.
+
 (You must have python pip, virtualenv, and mongodb server installed on your machine)
 
 ```sh
@@ -21,12 +23,12 @@ apt-get install python-dev libpq-dev
 service mongodb start
 ```
 
-## Creating a [python virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) for openPDS
+## Creating a [python2.7 virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) for openPDS
 You must clone the repo into the virtualenv directory for `setup.py` to work:
 
 ```sh
 # create the virtual environment
-virtualenv pdsEnv
+virtualenv -p /usr/bin/python2.7 pdsEnv
 cd pdsEnv
 source bin/activate
 
@@ -34,7 +36,7 @@ source bin/activate
 git clone https://github.com/HumanDynamics/openPDS.git
 cd openPDS
 
-# install openPDS and its requirements
+# install openPDS and its requirements, use requirements-freeze.txt if there are any version issues
 pip install -r requirements.txt
 
 # set up and run your local openPDS
